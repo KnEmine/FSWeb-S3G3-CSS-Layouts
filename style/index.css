@@ -1,6 +1,21 @@
 /* CSS stillerinizi buraya girin */
 body {
   margin: 0;
+  padding: 0;
+  background-color: #d3d4a7;
+}
+
+* {
+  font-family: "Segoe UI", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Segoe UI", sans-serif;
+}
+
+button {
+  padding: 10px 50px;
 }
 
 .containerClamp {
@@ -11,17 +26,20 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  background-color: peachpuff;
+  background-color: rgb(58, 164, 170);
 }
-.header h1 {
-  margin-left: 40px;
+.menu ul {
+  padding-inline-start: 0;
 }
 
 .menu ul li {
   display: inline-block;
   padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 900;
   background-color: powderblue;
-  text-transform: uppercase;
+  transition: background-color 0.5s ease-in;
+  text-transform: capitalize;
 }
 
 .menu ul li.menu--active {
@@ -41,6 +59,10 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   margin: 20px auto;
+}
+
+.about__image img {
+  border-radius: 15px 20px;
 }
 .about__content {
   /* display: inline-block; */
@@ -65,6 +87,7 @@ body {
 .project__image {
   background-color: rgb(215, 153, 142);
   width: 200px;
+  border-radius: 30px;
 }
 
 .footer {
@@ -77,4 +100,51 @@ body {
 .footer__cta {
   display: inline-block;
   text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .header h1 {
+    text-align: center;
+  }
+
+  .menu {
+    text-align: center;
+  }
+
+  .menu ul li {
+    display: block;
+  }
+
+  .about {
+    justify-content: center;
+  }
+
+  .about__content {
+    padding: 0;
+    text-align: center;
+  }
+
+  .about__content p {
+    text-align: left;
+  }
+
+  .projects__item {
+    width: 40%;
+  }
+
+  .project__image {
+    background-color: rgb(61, 173, 136);
+    width: 100%;
+  }
+
+  .projects {
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 500px) and (min-width: 900px) {
+  .containerClamp {
+    width: 900px;
+  }
 }
